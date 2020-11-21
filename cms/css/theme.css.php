@@ -19,7 +19,7 @@ select { -webkit-appearance:none; appearance:none; }
 /*--html--*/
 /*==================================================================================================*/
 
-html { height:100%; font:14px/40px Segoe UI, Consolas; overflow-y:scroll; background:#DADADA; }
+html { height:100%; font:14px/35px Segoe UI, Consolas; overflow-y:scroll; }
 
 body { display:flex; flex-direction:column; position:relative; min-height:100%; padding-bottom:40px; overflow-x:hidden; }
 
@@ -27,7 +27,7 @@ body > main { flex-grow:1; }
 
 .container { width:700px; max-width:100%; margin:auto; padding-left:20px; padding-right:20px; }
 
-.underline { text-decoration:underline; } .underline:hover, .underline:focus { text-decoration:none; }
+.underline { text-decoration:underline; cursor:pointer; } .underline:hover, .underline:focus { text-decoration:none; }
 
 .item { display:flex; border-radius:4px; padding:0 10px; margin-bottom:2px; }
 
@@ -43,6 +43,10 @@ body > main { flex-grow:1; }
 		"dark2"     => "rgba(0,0,0,0.2)",
 		"dark3"     => "rgba(0,0,0,0.3)",
 		"dark4"     => "rgba(0,0,0,0.4)",
+		"dark5"     => "rgba(0,0,0,0.5)",
+		"dark6"     => "rgba(0,0,0,0.6)",
+		"dark7"     => "rgba(0,0,0,0.7)",
+		"dark8"     => "rgba(0,0,0,0.8)",
 	];
 ?>
 
@@ -91,10 +95,17 @@ body > main { flex-grow:1; }
 
 .input { display:block; position:relative; transition:box-shadow 0.1s, background 0.1s, color 0.1s; width:100%; }
 
+.input { box-shadow:inset 0 0 0 2px var(--dark2); }
+
+.input:hover, .input:focus { box-shadow:inset 0 0 0 2px var(--dark5); }
+
 .btn { display:inline-block; position:relative; transition:box-shadow 0.1s, background 0.1s, color 0.1s; white-space:nowrap; cursor:pointer; overflow:hidden; text-overflow:ellipsis; }
 
-.btn-dark { background:var(--dark1); border-radius:4px; line-height:25px; font-weight:500; text-align:center; min-width:30px; padding:0 5px; }
-.btn-dark:hover { background:var(--dark2) }
+.btn-sm  { line-height:25px; }
+
+.btn-dark { background:var(--dark1); border-radius:7px; font-weight:500; text-align:center; min-width:30px; padding:0 5px; }
+
+.btn-dark:hover, .btn-dark:focus { background:var(--dark2) }
 
 /*==================================================================================================*/
 /*--geometry--*/

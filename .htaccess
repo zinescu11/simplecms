@@ -1,0 +1,5 @@
+# short tags
+php_flag short_open_tag on
+
+RewriteEngine on
+RewriteRule ^@/(.*)$ uploads/$1 [QSA,L]

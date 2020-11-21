@@ -7,7 +7,7 @@
 		// configuration
 		//==========================================================================================
 		
-		static $uploadDir = __DIR__ . "/../uploads";
+		static $uploadDir = __DIR__ . "/../../uploads";
 		
 		static $database = __DIR__ . "/database.json";
 		
@@ -30,19 +30,16 @@
 		}
 		
 		// item
-		static function item($name, $dir = 0)
+		static function item($name, $dirId = 0)
 		{
-			if (!$dir && $name[0] == "/") {
-				$dir = self::get(1);
-				$name = trim($name, "/");
-			}
+			$dirId = is_object($dirId) ? $dirId->id : intval($dirId);
+			
 			// split
-			list ($first, $tail) = explode("/", $name, 2);
+			list($first, $tail) = explode("/", $name, 2);
+			
 			// find
-			if ($dir)
-				$found = self::findone(["up" => intval($dir->id), "name" => $first]);
-			else
-				$found = self::findone(["name" => $first]);
+			$found = self::findOne(["up" => intval($dirId), "name" => $first]);
+			
 			// return
 			if ($found)
 				return $tail ? self::item($tail, $found) : $found;
@@ -51,7 +48,7 @@
 		// changing methods
 		//==========================================================================================
 		
-		// 1 remove
+		// remove
 		static function remove($id, $field = 0)
 		{
 			if ($field)
@@ -77,7 +74,7 @@
 			$newid = $maxid + 1;
 			
 			self::$content[]= (object)[
-				"up" => intval($id) ?: 1, "id" => $newid, "index" => "", "name" => $name];
+				"up" => intval($id) ?: 0, "id" => $newid, "index" => "", "name" => $name];
 			self::save();
 			return $newid;
 		}
@@ -155,10 +152,9 @@
 				return $row;
 			}
 		}
-		// image
+		// is image
 		static function valueIsImageUrl($value) {
-			$isImage = preg_match("#\.(png|jpeg|jpg|svg|gif)$#", $value);
-			return $isImage;
+			return preg_match("#\.(png|jpeg|jpg|svg|gif)$#", $value);
 		}
 		
 		// serializing methods

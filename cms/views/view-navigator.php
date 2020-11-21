@@ -1,37 +1,45 @@
-<?
+<?php
 	$qrFolder = cms::get($queryId);
 	$qrItems = cms::scan($queryId);
 ?>
 <!doctype html>
 <html>
 <head>
-	<title>SimpleCMS</title>
+	<title></title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/theme.css.php">
 </head>
 <body>
 	<main class="container py40">
 	
-		<a class="item" href='./<?=$qrFolder->up?>'> <b>&#128194; ..</b> </a>
+		<? if ($queryId): ?>
+			<a class="item" href='./<?=$qrFolder->up?>'> <b>&#128194; ..</b> </a>
+		<? endif ?>
 		
 		<? foreach ($qrItems as $v): ?>
 		
 			<a class="item" href="./<?=$v->id?>">
 			
-				<b class="fluid"> &#128194; <?=$v->name ?: $v->id?> </b>
+				<b class="fluid" style="min-width:40%"> &#128194; <?=$v->name ?: $v->id?> </b>
+				
+				&nbsp;
+				
+				<? if ($v->title): ?>
+					<div class="fluid op5 fcrop fnw"><?=$v->title?></div>
+				<? endif ?>
 				
 				&nbsp;
 				
 				<div class="row alcn">
-					<span class="btn btn-dark" onclick="location = '?id=<?=$v->id?>&rename=1'; return false;"> &#9998; </span>
+					<span class="btn btn-sm btn-dark" onclick="location = 'rename-<?=$v->id?>-name'; return false;"> &#9998; </span>
 				</div>
 				
 				&nbsp;
 				
-				<form method="post" action="?action=removeFolder">
+				<form method="post" action="./removeFolder">
 					<input type="hidden" name="id" value="<?=$queryId?>"/>
 					<input type="hidden" name="removeId" value="<?=$v->id?>"/>
-					<button class="btn btn-dark"> X </button>
+					<button class="btn btn-sm btn-dark" tabindex=-1> X </button>
 				</form>
 			</a>
 			
@@ -45,10 +53,10 @@
 				
 					<span style="min-width:40%"> &#128196;&nbsp; <?=$field?> </span>
 					
-					<small class="fluid" style="opacity:0.5"><?=$value?></small>
+					<small class="fluid op5 fcrop fnw"><?=htmlspecialchars($value)?></small>
 					
 					<? if (cms::valueIsImageUrl($value)): ?>
-						<span> <img src="<?=$value?>" style="display:inline-block; margin:0 10px; height:1em"/> </span>
+						<img src="<?=$value?>" class="rds7" style="height:25px; align-self:center;"/>
 					<? endif ?>
 					
 					&emsp;
@@ -56,10 +64,10 @@
 					<!--span class="rename" onclick="location = '?id=<?=$parent->id?>&renfield=<?=$field?>'; return false;">ren.</span-->
 					
 					&emsp;
-					<form method="post" action="?action=removeField">
+					<form method="post" action="./removeField">
 						<input type="hidden" name="id" value="<?=$queryId?>"/>
 						<input type="hidden" name="field" value="<?=$field?>"/>
-						<button class="btn btn-dark"> <!--&#10006;--> X </button>
+						<button class="btn btn-sm btn-dark" tabindex=-1> <!--&#10006;--> X </button>
 					</form>
 					
 				</a>
@@ -68,20 +76,31 @@
 			
 		<? endforeach ?>
 		
-		<footer class="row">
+		<br><hr>
 		
-			<form method="post" action="?action=appendFolder">
+		<footer class="row jucn">
+		
+			<form method="post" action="./appendFolder">
 				<input type="hidden" name="id" value="<?=$queryId?>"/>
-				<button class="btn btn-dark"> Добавить раздел </button>
+				<button class="btn btn-sm btn-dark"> Добавить раздел </button>
 			</form>
 			
 			&emsp;
 			
-			<form method="post" action="?action=appendField">
+			<form method="post" action="./appendField">
 				<input type="hidden" name="id" value="<?=$queryId?>"/>
-				<button class="btn btn-dark"> Добавить поле </button>
+				<button class="btn btn-sm btn-dark"> Добавить поле </button>
 			</form>
 			
+		</footer>
+		
+		<footer class="fcn">
+			<a class="underline" href=".."> Сайт </a>
+			
+			<form class="blki" method="post" action="./authExit">
+				<input type="hidden" name="id" value="<?=$queryId?>"/>
+				<button class="underline"> Выход </button>
+			</form>
 		</footer>
 		
 	</main>

@@ -1,115 +1,32 @@
 [
     {
         "up": 0,
-        "id": 1,
-        "index": 0,
-        "name": "site",
-        "about": "qwsqws\r\nhello",
-        "title": "@/photo_2020-11-10_15-49-02.jpg",
-        "readme": "@/photo_2020-11-10_15-49-02.jpg",
-        "haiku": "12345678"
-    },
-    {
-        "up": 0,
-        "id": 2,
-        "index": 0,
-        "name": "some-folder",
-        "wefiowjeofiwe": "ewdiowed",
-        "weoifwioefh": "::",
-        "weiofjweiofjw": "--",
-        "weofihwieof": "++",
-        "wieofwoiefh": "**"
-    },
-    {
-        "up": 0,
         "id": 3,
         "index": 0,
-        "name": "user",
-        "f1605912129": "",
-        "f1605912131": "",
-        "f1605912378": "",
-        "f1605912386": "",
-        "f1605912388": ""
-    },
-    {
-        "up": 0,
-        "id": 12,
-        "index": 0,
-        "name": "smtp-config",
-        "smtp_host": "ssl://smtp.yandex.com",
-        "smtp_user": "qws",
-        "smtp_password": "qws",
-        "smtp_port": "464"
-    },
-    {
-        "up": 0,
-        "id": 13,
-        "index": 0,
-        "name": "header",
-        "f1605912242": ""
-    },
-    {
-        "up": 0,
-        "id": 14,
-        "index": 0,
-        "name": "footer"
-    },
-    {
-        "up": 3,
-        "id": 4,
-        "index": 0,
-        "name": "sites"
-    },
-    {
-        "up": 3,
-        "id": 5,
-        "index": 0,
-        "name": "account"
-    },
-    {
-        "up": 1,
-        "id": 16,
-        "index": "",
-        "name": ""
-    },
-    {
-        "up": 1,
-        "id": 17,
-        "index": "",
-        "name": ""
-    },
-    {
-        "up": 1,
-        "id": 18,
-        "index": "",
-        "name": ""
-    },
-    {
-        "up": 1,
-        "id": 19,
-        "index": "",
-        "name": ""
+        "name": "_users"
     },
     {
         "up": 3,
         "id": 20,
         "index": "",
-        "name": ""
+        "name": "admin",
+        "passwordMd5": "202cb962ac59075b964b07152d234b70",
+        "hint": "password = 123"
     },
     {
-        "up": 3,
+        "up": 1,
         "id": 21,
         "index": "",
         "name": ""
     },
     {
-        "up": 13,
+        "up": 1,
         "id": 22,
         "index": "",
         "name": ""
     },
     {
-        "up": 13,
+        "up": 1,
         "id": 23,
         "index": "",
         "name": ""
@@ -124,24 +41,107 @@
         "up": 1,
         "id": 25,
         "index": "",
-        "name": ""
-    },
-    {
-        "up": 3,
-        "id": 26,
-        "index": "",
-        "name": ""
+        "name": "123"
     },
     {
         "up": 1,
-        "id": 27,
+        "id": 26,
         "index": "",
-        "name": ""
+        "name": "123"
     },
     {
-        "up": 3,
+        "up": 0,
+        "id": 27,
+        "index": "",
+        "name": "products"
+    },
+    {
+        "up": 0,
         "id": 28,
         "index": "",
-        "name": ""
+        "name": "banner",
+        "image": "@/riflecore.jpg",
+        "comment": "Evolving AI has untapped potential for bringing engaging interactions with virtual characters. At every step of the way we find new opportunities for applying our stack to new fields within games, social and entertainment products."
+    },
+    {
+        "up": 0,
+        "id": 29,
+        "index": "",
+        "name": "vacancies"
+    },
+    {
+        "up": 27,
+        "id": 30,
+        "index": "",
+        "name": "01",
+        "title": "fluxCortex",
+        "tags": "#ai #evolvingai #virtualbeings",
+        "description": "<b>fluxCortex Azu®</b> — next-generation Evolving AI hybrid architecture based on genetic algorithms and reinforcement learning.\r\n<p>\r\nVirtual Beings solution for natural interaction with emotional feedback and ability for real-time acquisition of skills.\r\n</p>"
+    },
+    {
+        "up": 27,
+        "id": 31,
+        "index": "",
+        "name": "02",
+        "title": "fluxNEAT",
+        "tags": "#ai #genetic #bots #npc",
+        "description": "<b>fluxNEAT®</b> — evolving Neural Networks solution capable of learning skills in real-time with zero to minimal pre-training data.\r\n<p>\r\nSelf-learning system for application in games providing human-like, evolving behaviors of computer-controlled characters.\r\n</p>"
+    },
+    {
+        "up": 27,
+        "id": 32,
+        "index": "",
+        "name": "03",
+        "title": "Riflecore",
+        "tags": "#gamedevelopment #onlinegame #brawler",
+        "description": "<b>Riflecore</b> fuses brawling fundamentals with tactical gunplay. Take map control with your teammates and demolish the enemies in a truly competitive way.\r\n<p>\r\nYour victories and choices will shape the tides of the ongoing hybrid war on the world map, and decide the fate of key characters with each new season rollout.\r\n</p>",
+        "page": "<h1>Riflecore</h1>\r\n\t\t\t\t<p><b>Riflecore</b> fuses brawling fundamentals with tactical gunplay. Take map control with your teammates and demolish the enemies in a truly competitive way.</p>\r\n\t\t\t\t<p>Your victories and choices will shape the tides of the ongoing hybrid war on the world map, and decide the fate of key characters with each new season rollout.</p>\r\n\t\t\t\t<p><img src=\"assets/images/riflecore.jpg\" alt=\"Riflecore\"></p>\r\n\t\t\t\t<p class=\"list_heading\"></p>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li>Precision and drive sculpted for the competitive online gaming scene</li>\r\n\t\t\t\t\t<li>Crisp hand-drawn line art graphics infused with modern rendering tech</li>\r\n\t\t\t\t\t<li>AI companions with customizable behaviors driven by groundbreaking evolving neural networks technology</li>\r\n\t\t\t\t\t<li>Meta game — each fight leaves a mark on the world map, engaging players in a global tug of war for influence</li>\r\n\t\t\t\t\t<li>Seasonal story mode where players get to defend their narrative decisions on a worldwide scale</li>\r\n\t\t\t\t</ul>\r\n\t\t\t\t<!--<a href=\"#\" class=\"submit\">Visit we"
+    },
+    {
+        "up": 29,
+        "id": 33,
+        "index": "",
+        "name": "01",
+        "title": "C++ Core Engineer",
+        "tags": "#engineering #full-time #remote #fluxcortex",
+        "description": "Experienced C++ engineer for development of core artificial intelligence technology framework and integration modules.",
+        "page": "<p class=\"list_heading\"><b>Responsibilities:</b></p>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li>Take part in design and develop core artificial intelligence technology framework and integration modules</li>\r\n\t\t\t\t\t<li>Deploy machine learning models to the cloud</li>\r\n\t\t\t\t\t<li>Analyze, profile and optimize AI technology stack</li>\r\n\t\t\t\t</ul>\r\n\t\t\t\t<p class=\"list_heading\"><b>Requirements:</b></p>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li>Strong C++ coding and software engineering skills</li>\r\n\t\t\t\t\t<li>Strong understanding of computer science data structures and algorithms</li>\r\n\t\t\t\t</ul>\r\n\t\t\t\t<p class=\"list_heading\"><b>Nice to have:</b></p>\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li>Experience with neural networks and artificial intelligence development</li>\r\n\t\t\t\t</ul>\r\n\t\t\t\t<p><b>Apply:</b></p>\r\n\t\t\t\t<p><a href=\"mailto:job@temporal.games\" class=\"mailto\">job@temporal.games</a></p>"
+    },
+    {
+        "up": 29,
+        "id": 34,
+        "index": "",
+        "name": "02",
+        "title": "VFX Artist",
+        "tags": "#techart #remote #riflecore",
+        "description": "Specialist capable of designing and implementing highly stylized visual effects, improving tools and optimizing pipelines."
+    },
+    {
+        "up": 29,
+        "id": 35,
+        "index": "",
+        "name": "03",
+        "title": "UI Designer",
+        "tags": "#ui #ux #gui #remote #riflecore",
+        "description": "Experienced UI/UX designer with a portfolio of game projects, capable of conceptualizing and implementing UI for Riflecore."
+    },
+    {
+        "up": 29,
+        "id": 36,
+        "index": "",
+        "name": "04",
+        "title": "Data Scientist",
+        "tags": "#engineering #full-time #remote #fluxcortex",
+        "description": "Experienced data scientist interested in developing new advanced technologies related to simulating convincing human-like behavior in learning, motion, speech and decision making."
+    },
+    {
+        "up": 29,
+        "id": 37,
+        "index": "",
+        "name": "05",
+        "title": "Other",
+        "tags": "",
+        "description": "If you don’t see your position listed but you think we can work together, feel free to contact us at job@temporal.games, include your targeted position in the letter subject.",
+        "page": ""
     }
 ]

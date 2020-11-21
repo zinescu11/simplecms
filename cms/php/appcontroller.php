@@ -3,30 +3,30 @@
 	{
 		static function doAppendFolder()
 		{
-			$id = $_POST["id"];
-			$newId = cms::append($id, "");
-			header("Location: ?id=$id#f$newId");
+			$id = intval($_POST["id"]);
+			$newId = cms::append($id, "123");
+			header("Location: ./$id");
 		}
 		static function doAppendField()
 		{
 			$id = $_POST["id"];
 			$field = "f" . time();
 			cms::update($id, $field, "");
-			header("Location: ?id=$id#v$field");
+			header("Location: ./$id");
 		}
 		static function doRemoveFolder()
 		{
 			$id = $_POST["id"];
 			$removeId = $_POST["removeId"];
 			cms::remove($removeId);
-			header("Location: ?id=$id");
+			header("Location: ./$id");
 		}
 		static function doRemoveField()
 		{
 			$id = $_POST["id"];
 			$field = $_POST["field"];
 			cms::unset($id, $field);
-			header("Location: ?id=$id");
+			header("Location: ./$id");
 		}
 		static function doRenameFolder()
 		{
@@ -34,7 +34,7 @@
 			$name = $_POST["name"];
 			$folder = cms::get($id);
 			cms::update($id, "name", $name);
-			header("Location: ?id={$folder->up}#f$id");
+			header("Location: ./{$folder->up}");
 		}
 		static function doRenameField()
 		{
@@ -43,7 +43,7 @@
 			$name = $_POST["name"];
 			if ($field != $name && $name != "name")
 				cms::rename($id, $field, $name);
-			header("Location: ?id=$id#v$name");
+			header("Location: ./$id");
 		}
 		static function doSaveField()
 		{
@@ -56,7 +56,12 @@
 				self::doUploadFiles();
 			if ($field != $name && $name != "name")
 				cms::rename($id, $field, $name);
-			header("Location: ?id=$id#v$name");
+			if ($field == "name") {
+				$folder = cms::get($id);
+				header("Location: ./{$folder->up}");
+			} else {
+				header("Location: ./$id");
+			}
 		}
 		static function doUploadFiles()
 		{
