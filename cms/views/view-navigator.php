@@ -82,14 +82,14 @@
 		
 			<form method="post" action="./appendFolder">
 				<input type="hidden" name="id" value="<?=$queryId?>"/>
-				<button class="btn btn-sm btn-dark"> Добавить раздел </button>
+				<button class="btn btn-sm btn-dark px15"> Добавить раздел </button>
 			</form>
 			
 			&emsp;
 			
 			<form method="post" action="./appendField">
 				<input type="hidden" name="id" value="<?=$queryId?>"/>
-				<button class="btn btn-sm btn-dark"> Добавить поле </button>
+				<button class="btn btn-sm btn-dark px15"> Добавить поле </button>
 			</form>
 			
 		</footer>

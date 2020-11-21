@@ -39,10 +39,10 @@ body > main { flex-grow:1; }
 
 <?php
 	$colors = [
-		"dark1"     => "rgba(0,0,0,0.1)",
+		"dark1"     => "rgba(0,0,0,0.05)",
 		"dark2"     => "rgba(0,0,0,0.2)",
 		"dark3"     => "rgba(0,0,0,0.3)",
-		"dark4"     => "rgba(0,0,0,0.4)",
+		"dark4"     => "rgba(0,0,0,0.2)",
 		"dark5"     => "rgba(0,0,0,0.5)",
 		"dark6"     => "rgba(0,0,0,0.6)",
 		"dark7"     => "rgba(0,0,0,0.7)",
@@ -97,7 +97,7 @@ body > main { flex-grow:1; }
 
 .input { box-shadow:inset 0 0 0 2px var(--dark2); }
 
-.input:hover, .input:focus { box-shadow:inset 0 0 0 2px var(--dark5); }
+.input:hover, .input:focus { box-shadow:inset 0 0 0 2px var(--dark3); }
 
 .btn { display:inline-block; position:relative; transition:box-shadow 0.1s, background 0.1s, color 0.1s; white-space:nowrap; cursor:pointer; overflow:hidden; text-overflow:ellipsis; }
 
