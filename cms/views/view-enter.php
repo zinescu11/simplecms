@@ -5,7 +5,7 @@
 <!doctype html>
 <html>
 <head>
-	<title></title>
+	<title>Cms</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/theme.css.php">
 </head>
