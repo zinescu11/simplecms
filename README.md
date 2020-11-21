@@ -1,3 +1,3 @@
 # simplecms
 
-![alt text](https://github.com/zinescu/simplecms/blob/[branch]/image.jpg?raw=true)
+![](https://raw.githubusercontent.com/zinescu11/simplecms/main/preview/preview.png)
