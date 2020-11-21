@@ -11,7 +11,21 @@
 	<link rel="stylesheet" href="css/theme.css.php">
 </head>
 <body>
-	<main class="container py40" onkeydown="if (event.code == 'Escape') { history.back(); return false; }">
+
+	<header class="back-dark1 h55">
+		<article class="container py10 row alcn">
+			<i class="fluid"></i>
+			<div class="row alcn">
+				<a class="btn btn-sm btn-dark underline" href=".."> Сайт </a>
+				&emsp;
+				<form method="post" action="./authExit">
+					<button class="btn btn-sm btn-dark"> Выход </button>
+				</form>
+			</div>
+		</article>
+	</header>
+
+	<main class="container py20" onkeydown="if (event.code == 'Escape') { history.back(); return false; }">
 
 		<form method="post" enctype="multipart/form-data" style="width:100%" action="saveField">
 		
@@ -35,5 +49,6 @@
 		</form>
 		
 	</main>
+	
 </body>
 </html>

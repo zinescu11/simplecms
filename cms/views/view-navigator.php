@@ -11,7 +11,45 @@
 	<link rel="stylesheet" href="css/theme.css.php">
 </head>
 <body>
-	<main class="container py40">
+	<header class="back-dark1 h55">
+	
+		<article class="container py10 row alcn">
+		
+			<div class="row">
+			
+				<form method="post" action="./appendFolder">
+					<input type="hidden" name="id" value="<?=$queryId?>"/>
+					<button class="btn btn-sm btn-dark px10"> + Добавить раздел </button>
+				</form>
+				
+				&emsp;
+				
+				<form method="post" action="./appendField">
+					<input type="hidden" name="id" value="<?=$queryId?>"/>
+					<button class="btn btn-sm btn-dark px10"> + Добавить поле </button>
+				</form>
+				
+			</div>
+			
+			<i class="fluid"></i>
+				
+			<div class="row alcn">
+			
+				<a class="btn btn-sm btn-dark underline" href=".."> Сайт </a>
+				
+				&emsp;
+				
+				<form method="post" action="./authExit">
+					<button class="btn btn-sm btn-dark"> Выход </button>
+				</form>
+				
+			</div>
+			
+		</article>
+		
+	</header>
+	
+	<main class="container py20">
 	
 		<? if ($queryId): ?>
 			<a class="item" href='./<?=$qrFolder->up?>'> <b>&#128194; ..</b> </a>
@@ -76,33 +114,6 @@
 			<? endif ?>
 			
 		<? endforeach ?>
-		
-		<br><hr>
-		
-		<footer class="row jucn">
-		
-			<form method="post" action="./appendFolder">
-				<input type="hidden" name="id" value="<?=$queryId?>"/>
-				<button class="btn btn-sm btn-dark px15"> Добавить раздел </button>
-			</form>
-			
-			&emsp;
-			
-			<form method="post" action="./appendField">
-				<input type="hidden" name="id" value="<?=$queryId?>"/>
-				<button class="btn btn-sm btn-dark px15"> Добавить поле </button>
-			</form>
-			
-		</footer>
-		
-		<footer class="fcn">
-			<a class="underline" href=".."> Сайт </a>
-			
-			<form class="blki" method="post" action="./authExit">
-				<input type="hidden" name="id" value="<?=$queryId?>"/>
-				<button class="underline"> Выход </button>
-			</form>
-		</footer>
 		
 	</main>
 </body>

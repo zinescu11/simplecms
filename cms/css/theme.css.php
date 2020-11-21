@@ -34,6 +34,24 @@ body > main { flex-grow:1; }
 .item:hover, .item:focus { background:var(--dark1) }
 
 /*==================================================================================================*/
+/*--inputs--*/
+/*==================================================================================================*/
+
+.input { display:block; position:relative; transition:box-shadow 0.1s, background 0.1s, color 0.1s; width:100%; }
+
+.input { box-shadow:inset 0 0 0 2px var(--dark2); }
+
+.input:hover, .input:focus { box-shadow:inset 0 0 0 2px var(--dark3); }
+
+.btn { display:inline-block; position:relative; white-space:nowrap; cursor:pointer; overflow:hidden; text-overflow:ellipsis; }
+
+.btn-sm  { line-height:25px; }
+
+.btn-dark { background:var(--dark1); border-radius:7px; font-weight:500; text-align:center; min-width:30px; padding:0 5px; }
+
+.btn-dark:hover, .btn-dark:focus { background:var(--dark2) }
+
+/*==================================================================================================*/
 /*--colors--*/
 /*==================================================================================================*/
 
@@ -47,6 +65,9 @@ body > main { flex-grow:1; }
 		"dark6"     => "rgba(0,0,0,0.6)",
 		"dark7"     => "rgba(0,0,0,0.7)",
 		"dark8"     => "rgba(0,0,0,0.8)",
+		"light1"    => "rgba(255,255,255,0.1)",
+		"light2"    => "rgba(255,255,255,0.2)",
+		"light4"    => "rgba(255,255,255,0.8)",
 	];
 ?>
 
@@ -89,23 +110,6 @@ body > main { flex-grow:1; }
 
 <?php endforeach ?>
 
-/*==================================================================================================*/
-/*--inputs--*/
-/*==================================================================================================*/
-
-.input { display:block; position:relative; transition:box-shadow 0.1s, background 0.1s, color 0.1s; width:100%; }
-
-.input { box-shadow:inset 0 0 0 2px var(--dark2); }
-
-.input:hover, .input:focus { box-shadow:inset 0 0 0 2px var(--dark3); }
-
-.btn { display:inline-block; position:relative; transition:box-shadow 0.1s, background 0.1s, color 0.1s; white-space:nowrap; cursor:pointer; overflow:hidden; text-overflow:ellipsis; }
-
-.btn-sm  { line-height:25px; }
-
-.btn-dark { background:var(--dark1); border-radius:7px; font-weight:500; text-align:center; min-width:30px; padding:0 5px; }
-
-.btn-dark:hover, .btn-dark:focus { background:var(--dark2) }
 
 /*==================================================================================================*/
 /*--geometry--*/
