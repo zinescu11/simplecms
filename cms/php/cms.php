@@ -17,10 +17,10 @@
 		// value
 		static function value($name)
 		{
-			list ($name, $field) = explode("/.", $name, 2);
-			$item = self::item($name);
-			$field or $field = "val";
-			if ($item) return $item->$field;
+			$parts = explode("/", $name);
+			$field = array_pop($parts);
+			$item = self::item(implode("/", $parts));
+			if ($item && $field) return $item->$field;
 		}
 		// items	
 		static function items($name)
@@ -169,28 +169,13 @@
 		// save
 		static function save()
 		{
-			$code = jsenc(self::$content);
+			$code = json_encode(self::$content, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
 			file_put_contents(self::$file, $code);
 		}
 		
 		static $file;
 		static $content;
 	}
-	
-	// utils
-	//==============================================================================================
-	
-	function clog() { foreach (func_get_args() as $arg) { print_r($arg); print(" "); } print("\n"); }
-
-	function strcon($str, $part) { return strpos($str, $part) !== false; }
-		
-	function strsw($str, $part) { return strpos($str, $part) === 0; }
-	
-	function strpadleft($str, $size, $char) { return str_pad($str, $size, $char, STR_PAD_LEFT); }
-	
-	function strpadright($str, $size, $char) { return str_pad($str, $size, $char, STR_PAD_RIGHT); }
-	
-	function jsenc($mixed) { return json_encode($mixed, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); }
 	
 	// autoload
 	//==============================================================================================
