@@ -1,10 +1,10 @@
 # simplecms
 
-Example Site: [](http://voidbox.online/simplecms/)
-
 ---
 
-Admin Panel: [](http://voidbox.online/simplecms/cms/)
+Example Site: http://voidbox.online/simplecms/
+
+Admin Panel: http://voidbox.online/simplecms/cms/
 
 Login: Admin, Password: 123
 
