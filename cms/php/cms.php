@@ -76,7 +76,7 @@
 				"up" => intval($id) ?: 0, "id" => $newid, "index" => "", "name" => $name];
 			if ($values) {
 				foreach ($values as $f => $v)
-					$newObject->$f or $newObject->$f = "";
+					isset($newObject->$f) or $newObject->$f = "";
 			}
 			self::$content[]= $newObject;
 			self::save();
