@@ -44,6 +44,8 @@
 		
 		<? if (cms::valueIsImageUrl($value)): ?>
 			<img src="<?=$value?>" style="display:inline-block; max-width:100%; margin:30px 0;"/>
+		<? else: ?>
+			<img src="" style="display:inline-block; max-width:100%; margin:30px 0;"/>
 		<? endif ?>
 	
 	</main>
