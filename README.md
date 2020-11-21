@@ -12,5 +12,3 @@ Login: Admin, Password: 123
 
 ![](https://raw.githubusercontent.com/zinescu11/simplecms/main/preview/preview.png)
 
-
-
