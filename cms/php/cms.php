@@ -114,6 +114,7 @@
 			copy($path, self::$uploadDir . "/$name");
 			$fileUrl = "@/$name";
 			self::update($id, $field, $fileUrl);
+			self::cleanUnusedUploadFiles();
 			return $fileUrl;
 		}
 		
@@ -175,6 +176,11 @@
 		{
 			$code = json_encode(self::$content, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
 			file_put_contents(self::$file, $code);
+		}
+		// cleaning upload directory - tmp solution
+		static function cleanUnusedUploadFiles()
+		{
+			// not implemented
 		}
 		
 		static $file;
