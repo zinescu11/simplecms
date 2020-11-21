@@ -182,6 +182,7 @@
 
  	spl_autoload_register(function($name)
  	{
+ 		$name = strtolower($name);
  		$file1 = __DIR__ . "/$name.php";
  		if (is_file($file1)) return require_once($file1);
 	});
