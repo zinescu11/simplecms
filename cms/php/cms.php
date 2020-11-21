@@ -66,15 +66,19 @@
 			self::save();
 		}
 		// append
-		static function append($id, $name)
+		static function append($id, $name, $values = null)
 		{
 			$maxid = 0;
 			foreach (self::$content as $row)
 				$maxid = max($maxid, $row->id);
 			$newid = $maxid + 1;
-			
-			self::$content[]= (object)[
+			$newObject = (object)[
 				"up" => intval($id) ?: 0, "id" => $newid, "index" => "", "name" => $name];
+			if ($values) {
+				foreach ($values as $f => $v)
+					$newObject->$f or $newObject->$f = "";
+			}
+			self::$content[]= $newObject;
 			self::save();
 			return $newid;
 		}
