@@ -53,7 +53,7 @@
 				
 					<span style="min-width:40%"> &#128196;&nbsp; <?=$field?> </span>
 					
-					<small class="fluid op5 fcrop fnw"><?=htmlspecialchars($value)?></small>
+					<span class="fluid op5 fcrop fnw"><?=htmlspecialchars($value)?></span>
 					
 					<? if (cms::valueIsImageUrl($value)): ?>
 						<img src="<?=$value?>" class="rds7" style="height:25px; align-self:center;"/>
