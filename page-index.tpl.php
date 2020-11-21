@@ -241,11 +241,14 @@
 		</div>
 		<div class="content">
 			<footer>
-				<p class="footer_left">Temporal Games 2020</p>
+				<p class="footer_left">Temporal Games 2020 </p>
 				<p class="footer_middle"><a href="mailto:contact@temporal.games">contact@temporal.games</a></p>
 				<p class="footer_right"><a href="https://www.facebook.com/temporalgames" target="_blank" rel="noopener">Facebook</a><a href="https://twitter.com/temporal_games" target="_blank"rel="noopener">Twitter</a><a href="https://vk.com/temporalgames" target="_blank"rel="noopener">VK</a><a href="https://www.youtube.com/c/temporalgames" target="_blank"rel="noopener">YouTube</a><a href="https://discord.gg/RFWQ6K7" target="_blank"rel="noopener">Discord</a></p>
 			</footer>
 		</div>
+		<center>
+			<p> <small><a href="cms/"> Edit Site </a></small> </p>
+		</center>
 	</div>
 	<script src="assets/js/swiper-bundle.min.js"></script>
 	<script>
