@@ -4,7 +4,7 @@
 		static function doAppendFolder()
 		{
 			$id = intval($_POST["id"]);
-			$newId = cms::append($id, "123");
+			$newId = cms::append($id, "New");
 			header("Location: ./$id");
 		}
 		static function doAppendField()
